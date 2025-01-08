@@ -467,6 +467,13 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  Copilot:
+    url: https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/Copilot.list
+    path: ./ruleset/Copilot.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http   
   Ai:
     url: https://raw.githubusercontent.com/juewuy/ShellClash/master/rules/ai.list
     path: ./ruleset/ai.list
@@ -642,6 +649,7 @@ rules:
   - "RULE-SET,OpenAi,OpenAi"
   - "RULE-SET,GithubCopilot,OpenAi"
   - "RULE-SET,Claude,OpenAi"
+  - "RULE-SET,Copilot.list,OpenAi"
   - "RULE-SET,Ai,OpenAi"
   - "RULE-SET,CloudFlareCDN,CloudFlareCDN"
   - "RULE-SET,NetEaseMusic,网易音乐"
