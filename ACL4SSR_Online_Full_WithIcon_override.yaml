@@ -328,14 +328,14 @@ proxy-groups:
   - name: 狮城节点
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png
     include-all: true
-    filter: (?i)(?<!Ukraine)(新加坡|坡|狮城|SG|Singapore|SIN)
+    filter: (?i)新加坡|坡|狮城|SG|Singapore|SIN
     type: load-balance
     interval: 300
     tolerance: 50
   - name: 韩国节点
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png
     include-all: true
-    filter: (?i)KR|Korea|KOR|Seoul|首尔|春川|韩|韓|ICN
+    filter: (?i)(?<!Ukraine)(KR|Korea|KOR|Seoul|首尔|春川|韩|韓|ICN)
     type: load-balance
     interval: 300
     tolerance: 50
