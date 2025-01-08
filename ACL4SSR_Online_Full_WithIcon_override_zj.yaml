@@ -353,36 +353,6 @@ proxy-groups:
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png
     include-all: true
     type: select
-    proxies:
-      - 节点选择
-      - 手动切换
-      - 自动选择
-      - 电报消息
-      - OpenAi
-      - 油管视频
-      - 奈飞视频
-      - 巴哈姆特
-      - 哔哩哔哩
-      - 国外媒体
-      - 国内媒体
-      - 谷歌FCM
-      - 微软Bing
-      - 微软云盘
-      - 微软服务
-      - 苹果服务
-      - 游戏平台
-      - 网易音乐
-      - 全球直连
-      - 广告拦截
-      - 应用净化
-      - 漏网之鱼
-      - 香港节点
-      - 日本节点
-      - 美国节点
-      - 台湾节点
-      - 狮城节点
-      - 韩国节点
-      - 奈飞节点
 
 rule-providers:
   CFnat:
@@ -479,6 +449,27 @@ rule-providers:
   OpenAi:
     url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list
     path: ./ruleset/OpenAi.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  GithubCopilot:
+    url: https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/GithubCopilot.list
+    path: ./ruleset/GithubCopilot.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Claude:
+    url: https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/Claude.list
+    path: ./ruleset/Claude.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Ai:
+    url: https://raw.githubusercontent.com/juewuy/ShellClash/master/rules/ai.list
+    path: ./ruleset/ai.list
     behavior: classical
     interval: 86400
     format: text
@@ -588,6 +579,27 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  Proxy:
+    url: https://raw.githubusercontent.com/UlinoyaPed/ShellClash/dev/lists/proxy.list
+    path: ./ruleset/proxy.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  CMBlog:
+    url: https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/CMBlog.list
+    path: ./ruleset/CMBlog.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  direct:
+    url: https://raw.githubusercontent.com/UlinoyaPed/ShellClash/dev/lists/direct.list
+    path: ./ruleset/direct.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
   ChinaDomain:
     url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
     path: ./ruleset/ChinaDomain.list
@@ -628,6 +640,9 @@ rules:
   - "RULE-SET,Apple,苹果服务"
   - "RULE-SET,Telegram,电报消息"
   - "RULE-SET,OpenAi,OpenAi"
+  - "RULE-SET,GithubCopilot,OpenAi"
+  - "RULE-SET,Claude,OpenAi"
+  - "RULE-SET,Ai,OpenAi"
   - "RULE-SET,CloudFlareCDN,CloudFlareCDN"
   - "RULE-SET,NetEaseMusic,网易音乐"
   - "RULE-SET,Epic,游戏平台"
@@ -643,6 +658,9 @@ rules:
   - "RULE-SET,ChinaMedia,国内媒体"
   - "RULE-SET,ProxyMedia,国外媒体"
   - "RULE-SET,ProxyGFWlist,节点选择"
+  - "RULE-SET,Proxy,节点选择"
+  - "RULE-SET,CMBlog,节点选择"
+  - "RULE-SET,direct,全球直连"
   - "RULE-SET,ChinaDomain,全球直连"
   - "RULE-SET,ChinaCompanyIp,全球直连"
   - "RULE-SET,Download,全球直连"
