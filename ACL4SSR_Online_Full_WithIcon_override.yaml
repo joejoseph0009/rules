@@ -314,7 +314,7 @@ proxy-groups:
   - name: 美国节点
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png
     include-all: true
-    filter: (?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|ATL|BUF|DFW|EWR|IAD|LAX|MCI|MIA|ORD|PHX|PDX|SEA|SJC(?!.*(Australia|Russia))
+    filter: (?i)(?<!Russia|Australia)(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|ATL|BUF|DFW|EWR|IAD|LAX|MCI|MIA|ORD|PHX|PDX|SEA|SJC)
     type: load-balance
     interval: 300
     tolerance: 50
@@ -328,7 +328,7 @@ proxy-groups:
   - name: 狮城节点
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png
     include-all: true
-    filter: (?i)新加坡|坡|狮城|SG|Singapore|SIN(?!.*(Ukraine))
+    filter: (?i)(?<!Ukraine)(新加坡|坡|狮城|SG|Singapore|SIN)
     type: load-balance
     interval: 300
     tolerance: 50
@@ -339,10 +339,10 @@ proxy-groups:
     type: load-balance
     interval: 300
     tolerance: 50
-  - name: 其他国家地区节点
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World.png
+  - name: 世界节点
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png
     include-all: true
-    filter: (?i)(?!.*(港|HK|hk|Hong Kong|HongKong|hongkong|HKG|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan|Tokyo|NRT|KIX|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|ATL|BUF|DFW|EWR|IAD|LAX|MCI|MIA|ORD|PHX|PDX|SEA|SJC|台|新北|彰化|TW|Taiwan|TPE|KHH|新加坡|坡|狮城|SG|Singapore|SIN|KR|Korea|KOR|Seoul|首尔|春川|韩|韓|ICN))
+    filter: (?i)(?<!(港|HK|hk|Hong Kong|HongKong|hongkong|HKG|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan|Tokyo|NRT|KIX|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|ATL|BUF|DFW|EWR|IAD|LAX|MCI|MIA|ORD|PHX|PDX|SEA|SJC|台|新北|彰化|TW|Taiwan|TPE|KHH|新加坡|坡|狮城|SG|Singapore|SIN|KR|Korea|KOR|Seoul|首尔|春川|韩|韓|ICN))
     type: select
   - name: 奈飞节点
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png
