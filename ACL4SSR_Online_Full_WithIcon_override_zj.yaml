@@ -611,6 +611,9 @@ rule-providers:
     type: http
 
 rules:
+  - DOMAIN-SUFFIX,novipnoad.net,DIRECT
+  - DOMAIN-SUFFIX,gying.si,DIRECT
+  - DOMAIN-SUFFIX,svipsvip.ffzy-online5.com,DIRECT
   - "RULE-SET,LocalAreaNetwork,全球直连"
   - "RULE-SET,UnBan,全球直连"
   - "RULE-SET,BanAD,广告拦截"
