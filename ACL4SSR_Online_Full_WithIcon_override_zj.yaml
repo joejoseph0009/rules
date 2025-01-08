@@ -649,7 +649,7 @@ rules:
   - "RULE-SET,OpenAi,OpenAi"
   - "RULE-SET,GithubCopilot,OpenAi"
   - "RULE-SET,Claude,OpenAi"
-  - "RULE-SET,Copilot.list,OpenAi"
+  - "RULE-SET,Copilot,OpenAi"
   - "RULE-SET,Ai,OpenAi"
   - "RULE-SET,CloudFlareCDN,CloudFlareCDN"
   - "RULE-SET,NetEaseMusic,网易音乐"
