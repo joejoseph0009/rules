@@ -17,7 +17,7 @@ proxy-groups:
   - name: 自建节点
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Available.png
     include-all: true
-    filter: (?i)自建|请勿测速
+    filter: (?i)自建|请勿测速|serv00|server
     type: select
   - name: 手动切换
     icon: https://fastly.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/select.png
